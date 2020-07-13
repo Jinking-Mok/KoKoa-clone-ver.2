@@ -1,0 +1,30 @@
+.status-bar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border: 1px solid white;
+  background-color: black;
+  z-index: 4;
+}
+.status-bar i {
+  font-size: 14px;
+}
+.status-bar__time {
+  width: auto;
+}
+.status-bar__time-now {
+  font-weight: 400;
+  font-size: 15px;
+  margin-right: 3px;
+}
+.status-bar__icons {
+  width: auto;
+}
+.status-bar__icons i {
+  margin-left: 3px;
+}

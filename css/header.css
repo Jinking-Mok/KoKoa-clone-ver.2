@@ -1,0 +1,32 @@
+.header {
+  position: sticky;
+  top: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 45px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 1px solid white;
+  background-color: black;
+  z-index: 3;
+}
+
+.header .header__title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.header .header__icon {
+  font-size: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.header .header__header-column {
+  display: flex;
+  align-items: center;
+}
+.header .header__back-btn {
+  font-size: 22px;
+  margin-right: 20px;
+}
