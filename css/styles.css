@@ -101,8 +101,9 @@ a {
   line-height: 1.5;
   padding: 0px 20px;
   display: none;
+  z-index: 6;
 }
-@media screen and (max-width: 550px) {
+@media screen and (min-width: 550px) {
   .bigscreen {
     display: flex;
   }
