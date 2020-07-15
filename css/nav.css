@@ -6,6 +6,7 @@
   left: 0;
   bottom: 0;
   border-top: 1px solid #f7f7f7;
+  animation: nav-intro 1.5s ease-out;
 }
 .nav .nav__list {
   display: flex;
@@ -15,6 +16,10 @@
 .nav i {
   font-size: 22px;
   color: #fcfcfc;
+  transition: all 0.2s 0.1s ease-in-out;
+}
+.nav i:hover {
+  transform: scale(1.2, 1.2);
 }
 .nav .nav__list-link {
   position: relative;
@@ -32,6 +37,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+  z-index: 5;
 }
 .friend__c-column {
   display: flex;

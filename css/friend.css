@@ -69,3 +69,13 @@
 .friends__list li {
   margin-bottom: 20px;
 }
+.friends__list li,
+.friends__list .friends__title,
+.friends__me,
+.friends .friends__plus {
+  animation: intro 1s ease-out;
+}
+.friends__plus .friend__column:nth-child(2),
+.friend__now-listening {
+  cursor: pointer;
+}

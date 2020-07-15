@@ -5,13 +5,31 @@
 .chats__body .status-bar {
   padding: 0px 20px;
 }
+.chats {
+  animation: intro 1s ease-out;
+}
 .chat-screen {
-  background-image: url("");
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url('../img/me.png');
+  background-position: center;
   min-height: 100vh;
+  animation: c-bg 2s ease-in-out;
+}
+.c-header {
+  animation: c-header 0.9s ease-out;
 }
 .chat__write {
   position: fixed;
-  bottom: 50px;
+  bottom: 30px;
   width: 90%;
   margin: 0 auto;
   left: 0;
@@ -24,6 +42,7 @@
   border-radius: 40px;
   box-shadow: 0 7px 14px 0 rgba(60, 66, 87, 0.08),
     0 3px 6px 0 rgba(0, 0, 0, 0.12);
+  animation: 2s ease-in-out;
 }
 .chat__write i {
   font-size: 22px;
@@ -42,21 +61,18 @@
 }
 .chat-screen .chat__messages {
   border-top: 1px solid #f7f7f7;
-  padding-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0px 20px;
   padding-top: 30px;
+  padding-left: 0px;
 }
 .chat__messages .chat__timestamp {
-  background-color: rgb(31, 31, 31);
-  font-size: 14px;
-  padding: 5px 10px;
+  background-color: rgb(39, 39, 39);
+  padding: 5px 12px;
   border-radius: 10px;
   margin-bottom: 30px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
@@ -65,17 +81,17 @@
   width: 50%;
   display: flex;
   align-items: flex-start;
-  margin-bottom: 20px;
 }
 .chat__messages li {
   width: 60%;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .message .message__content {
   width: 80%;
 }
 .incoming-message {
   align-self: flex-start;
+  color: #313131;
 }
 .sent-message {
   align-self: flex-end;
@@ -85,6 +101,8 @@
   width: auto;
   border-radius: 15px;
   margin-right: 15px;
+  margin-left: 5px;
+  cursor: pointer;
 }
 .message .message__bubble {
   display: flex;
@@ -92,6 +110,7 @@
   box-shadow: 0 7px 14px 0 rgba(60, 66, 87, 0.08),
     0 3px 6px 0 rgba(0, 0, 0, 0.12);
   padding: 10px 20px;
+  margin-bottom: 20px;
   border-radius: 30px;
   font-size: 12px;
 }
@@ -99,7 +118,7 @@
   width: 40px;
   height: 40px;
   object-fit: cover;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .incoming-message .message__author {
   margin-top: 10px;
@@ -110,15 +129,15 @@
 }
 .incoming-message .message__bubble {
   color: black;
-  border: 4px solid rgb(228, 228, 11);
-  border-bottom-left-radius: 0px;
-  background-image: linear-gradient(to left, #eeeef0, #313131);
+  border: 2px solid #313131;
+  border-top-left-radius: 0px;
+  background-image: linear-gradient(to right, hsl(56, 100%, 64%), #eeeef0);
 }
 .sent-message .message__bubble {
   color: black;
-  border: 4px solid rgb(9, 62, 206);
+  border: 2px solid #313131;
   border-bottom-right-radius: 0px;
-  background-image: linear-gradient(to right, #eeeef0, #313131);
+  background-image: linear-gradient(to left, rgb(9, 62, 206), #eeeef0);
 }
 .sent-message {
   display: flex;
@@ -131,4 +150,27 @@
 }
 .chat__write {
   color: black;
+  transition: all 0.5s 0.2s ease-in-out;
+}
+.chat__write i {
+  cursor: pointer;
+  transition: all 0.2s 0.1s ease-in-out;
+}
+.chat__write i:hover {
+  transform: scale(1.1, 1.1);
+}
+.message__avatar {
+  animation: m-av 5s 3s infinite ease-in-out;
+}
+.sent-message .message__bubble {
+  transition: all 0.2s 0.1s ease-in-out;
+}
+.incoming-message .message__bubble {
+  transition: all 0.2s 0.1s ease-in-out;
+}
+.sent-message .message__bubble:hover {
+  transform: translateX(-15px);
+}
+.incoming-message .message__bubble:hover {
+  transform: translateX(15px);
 }

@@ -9,6 +9,7 @@
   padding-bottom: 30px;
   background-color: black;
   z-index: 3;
+  animation: intro 1s ease-out;
 }
 
 .header .header__title {
