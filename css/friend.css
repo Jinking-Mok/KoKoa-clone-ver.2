@@ -63,7 +63,7 @@
   background-color: #f5f5f5;
   border-radius: 5px;
 }
-.fa-plus {
+.friends__plus .fa-plus {
   color: black;
 }
 .friends__list li {
